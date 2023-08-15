@@ -1,5 +1,12 @@
+'use client';
+
+import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Navbar from './components/Navbar';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,9 +16,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const currentpath = usePathname()
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className }>
+
+       <div className='p-10'>
+        <Navbar/>
+        {children}
+        <ProgressBar/>
+        <div>
+          <Link href={'/Blog'} className={currentpath === '/Blog'?"text-red-500":"text-white"}> Blog </Link>
+        </div>
+       </div>
+      </body>
     </html>
   )
 }
