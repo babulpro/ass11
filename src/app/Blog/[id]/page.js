@@ -1,5 +1,6 @@
-import getBlogPost from "@/lib/getblogpost";
 
+
+import getBlogPost from "../../../lib/getblogpost";
  
 
  export default async function SingleBlog({params}){
@@ -9,13 +10,16 @@ import getBlogPost from "@/lib/getblogpost";
 
     return(
         <div>
-            <section className=" mt-11">
+            <section className=" mt-22S mb-28">
                  <h1 className="underline uppercase text-yellow-400 mb-5">{post.title}</h1>
                  <div className='text-red-400 mb-10'>
-                   {post.body}
+                   {post.short}
                  </div>
 
             </section>
         </div>
     )
  }
+ 
+
+ 

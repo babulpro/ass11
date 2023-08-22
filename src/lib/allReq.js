@@ -1,10 +1,9 @@
-import React from 'react';
 
 const getAllPosts =async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
+    const res = await fetch('https://basic-blog.teamrabbil.com/api/post-list/2')
     
     if(!res.ok){
-        throw new Error('Error featching posts')
+        throw new Error('Error posts')
     }
     return res.json()
      

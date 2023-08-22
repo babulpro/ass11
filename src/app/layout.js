@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Footer from './components/footer';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
         {children}
         <ProgressBar/>
         <div>
-          <Link href={'/Blog'} className={currentpath === '/Blog'?"text-red-500":"text-white"}> Blog </Link>
+         <Footer/>
         </div>
        </div>
       </body>
