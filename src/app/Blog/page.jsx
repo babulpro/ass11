@@ -8,7 +8,7 @@ import Link from "next/link"
     return(
         <div >
             <section className="mt-11">
-                 <h1 className="uppercase text-red-400 underline mb-5">Blog post</h1>
+                 <h1 className="uppercase text-red-400 underline mb-5">Blog post </h1>
                  <div>
                     {posts.map((value)=>{
                         return(
